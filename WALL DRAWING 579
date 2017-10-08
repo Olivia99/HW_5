@@ -1,0 +1,22 @@
+function setup() { 
+  createCanvas(400, 400);
+} 
+
+function draw() { 
+  background(220);
+	colorMode(RGB);
+	
+	strokeWeight(220);
+	stroke(50,150,210);
+	line(200,180,200,400);
+	
+	
+	strokeWeight(130);
+	stroke(220,50,110);
+	line(200,190,200,400);
+	
+	strokeWeight(45);
+	stroke(255,255,0);
+	line(200,200,200,400);
+	
+}
