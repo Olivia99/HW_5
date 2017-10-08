@@ -16,6 +16,6 @@ function setup() {
 		// fill.forEach(randomColors(colors));
 								 
     fill(colors.r,colors.g,colors.b);
-    ellipse(20+i*100, height/2, sizes[i], sizes[i]);
+    ellipse(80+i*100, height/2, sizes[i], sizes[i]);
   }
 }
