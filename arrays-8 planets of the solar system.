@@ -1,0 +1,21 @@
+var sizes = [100,90,40,38.8,10,9.5,5.3,3.8];
+var colors={
+	r: 90,
+	g: 50,
+	b: 100,
+}
+	
+
+function setup() {
+  createCanvas(1000, 1000);
+
+  noStroke();
+    
+  for (var i = 0; i < sizes.length; i += 1) {
+		colorMode(RGB);
+		// fill.forEach(randomColors(colors));
+								 
+    fill(colors.r,colors.g,colors.b);
+    ellipse(20+i*100, height/2, sizes[i], sizes[i]);
+  }
+}
