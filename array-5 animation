@@ -1,27 +1,27 @@
 var sizes = [100,90,40,38.8,10,9.5,5.3,3.8];
 ellipses=[];
 function setup(){
- createCanvas(1000,1000);
+ createCanvas(800,800);
 	for (var i=0; i<8;i++){
 	ellipses[i]={
 		x: 80+i*100,
-		y: 120,
+		y: 20,
 		d1: sizes[i],
 		d2: sizes[i],
-		v: 30,
+		v: 20,
 		drawEllipse: function(){
 			fill(60,30,80);
 			ellipse(this.x,this.y,this.d1,this.d2);
 		},
 		move: function(){
-			if(this.y<1000){
-				this.y=this.y+this.v;
-				}else {
-					this.y=this.y-this.v
+			if(this.y>700){
+				this.v=-20;
 				}
+
 			if(this.y<0){
-				this.y=this.y+this.v;
+				this.v=20;
 			}
+			this.y=this.y+this.v;
 			}
 		}
 	}
@@ -29,6 +29,7 @@ function setup(){
 
 
 function draw(){
+	background(255);
 	for(var i=0; i<8; i++){
 		ellipses[i].drawEllipse();
 		ellipses[i].move();
