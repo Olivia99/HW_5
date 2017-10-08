@@ -17,7 +17,8 @@ function setup() {
 }
 
 function draw() {
-  rectMode(CENTER);
+  // rectMode(CENTER);
+	ellipseMode(CENTER);
   background(220);
   
   agents.forEach(activateAgent);
@@ -41,9 +42,11 @@ function drawAgent(agent) {
   stroke(0);
 	colorMode(HSB)
   fill(agent.h,20,200);
-  rect(0, 0, 20, 10);
+  // rect(0, 0, 20, 10);
+	ellipse(0,0,20,20);
   fill(0);
-  rect(0, 0, 2, 2);
+  // rect(0, 0, 2, 2);
+	ellipse(0,0,2,2);
   pop();
 }
 
