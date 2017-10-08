@@ -5,15 +5,23 @@ function setup(){
 	for (var i=0; i<8;i++){
 	ellipses[i]={
 		x: 80+i*100,
-		y: 500,
-		d1: size[i],
-		d2: size[i],
+		y: 120,
+		d1: sizes[i],
+		d2: sizes[i],
+		v: 30,
 		drawEllipse: function(){
 			fill(60,30,80);
 			ellipse(this.x,this.y,this.d1,this.d2);
 		},
 		move: function(){
-			this.x=this.x+10;
+			if(this.y<1000){
+				this.y=this.y+this.v;
+				}else {
+					this.y=this.y-this.v
+				}
+			if(this.y<0){
+				this.y=this.y+this.v;
+			}
 			}
 		}
 	}
