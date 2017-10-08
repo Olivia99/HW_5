@@ -1,0 +1,18 @@
+function setup() { 
+  createCanvas(500, 500);
+} 
+var x=0;
+var y=0;
+function draw() { 
+  background(220);
+	colorMode(RGB);
+	
+	for(var x=10; x< width; x+=10){
+		for(var y=10; y<height; y+=10){
+ 		 ellipse(x,y,5,5);
+			fill(random(0,255),random(20,200),random(20,200));
+		}
+	}
+	
+
+}
