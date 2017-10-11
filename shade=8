@@ -1,0 +1,41 @@
+var shades=[10,20,33,44,55,66,77,88,99];
+var rect=[];
+var v=[10,20,30,40,50,60,70,80,90];
+function setup() { 
+  createCanvas(900, 400);
+	colorMode(HSB);
+	noStroke();
+
+for (var i=0; i<9; i++){
+	rect[i]={
+		x: i*width/9,
+		y: 0,
+		w: width/9,
+		h: height,
+		s: shades[i],
+		v: v[i],
+		drawRect: function(){
+		fill(this.s,100,100);
+		rect(this.x,this.y,this.w,this.h);
+		},
+		slide: function(){
+			this.x=this.x+ this.v;
+			// this.x=this.x+5
+			// this.x=this.x+this.s
+			if(this.x>width){
+				this.x=0;
+			}
+		},
+			
+  }
+}
+}
+
+function draw() { 
+	for (var i=0;i<9;i++){
+		rect[i].drawRect();
+		rect[i].slide();
+	};
+	// shades[shades.length-1]=300;
+		
+}
