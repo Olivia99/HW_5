@@ -26,6 +26,7 @@ function draw() {
 	agents.forEach(keyPressed);
 
 }
+// angleMode(DEGREES);
 function mousePressed() {
   agents.push({
      x: mouseX,
@@ -80,7 +81,15 @@ function activateAgent(agent) {
 
 function keyPressed(agent) {
  if (keyCode === LEFT_ARROW) {
-    agent.angle=0;
+    agent.angle=PI;
   }
-	
+if(keyCode===UP_ARROW){
+	agent.angle=30;
+}
+	if(keyCode===DOWN_ARROW){
+	agent.angle=HALF_PI;	
+	}
+	if(keyCode===RIGHT_ARROW){
+	agent.angle=TWO_PI;	
+	}
 		}
